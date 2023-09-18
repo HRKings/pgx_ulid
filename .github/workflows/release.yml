@@ -30,11 +30,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        postgres: [14, 15, 16]
+        postgres: [16]
         box:
-          - runner: ubuntu-22.04
+          - runner: ubuntu-latest
             arch: amd64
-          - runner: buildjet-8vcpu-ubuntu-2204-arm
+          - runner: buildjet-8vcpu-ubuntu-latest-arm
             arch: arm64
     runs-on: ${{ matrix.box.runner }}
     timeout-minutes: 45
